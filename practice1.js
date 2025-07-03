@@ -5,7 +5,7 @@
 
 let arr = [1, 2, 3, 4]
 function doubleEvens(arr) {
-  let newArr = arr.filter(x => x%2)
+  let newArr = arr.filter(x => x%2===0);
   newArr = newArr.map(x => x*2);
   return newArr;
 }
@@ -64,7 +64,7 @@ console.log(updateTags(user, newTag));
 let users = [ {id: 1, name: "Vasiliki"}, {id: 2, name:"Max"}, {id: 3, name: "Alice"}, {id: 4, name: "George"}];
 
 function arrayToMap(users) {
- return users.reduse(function (map, user){
+ return users.reduce(function (map, user){
   map[user.id] = user.name;
   return map;
  }, {})
