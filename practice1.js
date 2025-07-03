@@ -136,6 +136,17 @@ function arrayToMap(users) {
   return map;
 }
 
+// Alternative version using reduce:
+function arrayToMapWithReduce(users) {
+  let map = {};
+
+  users.reduce(function(currentMap, user) {
+    currentMap[user.id] = user.name;
+    return currentMap;
+  }, map);
+  return map;
+}
+
 const users = [
   { id: 1, name: 'Antonio' },
   { id: 2, name: 'Cate' },
@@ -143,3 +154,4 @@ const users = [
 ];
 
 console.log(arrayToMap(users));
+console.log(arrayToMapWithReduce(users));
