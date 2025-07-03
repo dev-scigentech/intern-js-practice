@@ -3,7 +3,33 @@
 // Write a function `doubleEvens(arr)` that takes an array of numbers and returns a new array
 // with only the even numbers, each doubled. Use `filter` and `map` — no loops allowed.
 
-function doubleEvens(arr) {}
+function doubleEvens(arr) {
+  // Step 1: Filter only even numbers from the input array
+  let newNumbers = arr.filter(x => x%2 == 0);
+
+  // Step 2: Double each even number
+  newNumbers = newNumbers.map(x => x*2);
+
+  // Step 3: Return the new array with doubled even numbers
+  return newNumbers;
+}
+
+console.log(doubleEvens([1, 2, 3, 4, 5, 6])); 
+
+// Alternative version using a for loop:
+/* 
+function doubleEvens(arr) {
+  const newNumbers = [];
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] % 2 === 0) {
+      newNumbers.push(arr[i] * 2);
+    }
+  }
+  return newNumbers;
+}
+*/
+
+//-----------------------------------------------------------------------------------------------------------------
 
 // ✅ 2. Merge User Settings with Defaults
 // Description:
